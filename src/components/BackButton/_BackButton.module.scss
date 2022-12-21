@@ -19,3 +19,27 @@
     transform: scale(1.1);
   }
 }
+
+@media screen and (max-width: 600px) {
+  .backButton {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    top: 5px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    font-family: 'Raleway', sans-serif;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

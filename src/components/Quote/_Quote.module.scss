@@ -1,5 +1,7 @@
 .quote {
+  margin: 0 10px;
   max-width: 650px;
+
   blockquote {
     margin: 0;
     padding: 0 0 0 100px;
@@ -7,8 +9,27 @@
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 500;
-    font-size: 36px;
+    font-size: calc(2vw + 5px);
     line-height: 120%;
     color: #000000;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .quote {
+    margin: 0 10px;
+    max-width: 650px;
+
+    blockquote {
+      margin: 0;
+      padding: 0 0 0 60px;
+      border-left: 8px solid #F7DF94;
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 120%;
+      color: #000000;
+    }
   }
 }

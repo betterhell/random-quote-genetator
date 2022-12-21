@@ -18,3 +18,28 @@
 .quotes:last-child {
   margin-bottom: 140px;
 }
+
+@media screen and (max-width: 600px) {
+  .authorQuotes__header {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    text-align: center;
+
+    h1 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 42px;
+    }
+  }
+
+  .quotes {
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+  }
+
+  .quotes:last-child {
+    margin-bottom: 140px;
+  }
+}
