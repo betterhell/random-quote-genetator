@@ -1,0 +1,20 @@
+.authorQuotes__header {
+  margin-bottom: 140px;
+
+  h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+.quotes {
+  display: flex;
+  flex-direction: column;
+  gap: 140px;
+}
+
+.quotes:last-child {
+  margin-bottom: 140px;
+}
