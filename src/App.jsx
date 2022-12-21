@@ -33,7 +33,7 @@ function App() {
         });
         setIsLoading(false);
       })
-      .catch((error) => console.log(`Ошибка запроса` + error));
+      .catch((error) => setError(`Ошибка запроса` + error));
   };
 
   const spaceReplacer = (author) => {
@@ -67,7 +67,7 @@ function App() {
           author: randomQuote.author,
           id: data.quotes.id,
         });
-        navigate(`/author/${randomQuote.id}`);
+        navigate(`/author/${randomQuote.author}`);
         setIsLoading(false);
       })
       .catch((error) => {
@@ -102,7 +102,7 @@ function App() {
           }
         />
         <Route
-          path={`/author/:id`}
+          path={`/author/:author`}
           element={<AuthorQuotes allAuthorQuotes={allAuthorQuotes} />}
         />
       </Routes>
