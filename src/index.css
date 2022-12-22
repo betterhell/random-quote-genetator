@@ -4,3 +4,32 @@ body {
     font-family: 'Raleway', sans-serif;
     margin: 0 auto;
 }
+
+.App {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.createdBy {
+    position: absolute;
+    bottom: 0;
+}
+
+.createdBy p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #828282
+}
+
+.createdBy a {
+    text-decoration: none;
+    color: #828282;
+    font-weight: bold;
+}
