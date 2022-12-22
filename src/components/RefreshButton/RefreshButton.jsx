@@ -4,7 +4,6 @@ import { useQuoteGenerator } from "../../store/store";
 import { useEffect } from "react";
 
 const RefreshButton = () => {
-  const iconStyles = { rotate: "90deg" };
   const getRandomQuote = useQuoteGenerator((state) => state.getRandomQuote);
 
   useEffect(() => {
@@ -13,7 +12,7 @@ const RefreshButton = () => {
 
   return (
     <button onClick={getRandomQuote} className={classes.refresh}>
-      random <MdCached size={25} style={iconStyles} />
+      random <MdCached size={25} style={{ rotate: "90deg" }} />
     </button>
   );
 };
