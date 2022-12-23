@@ -2,17 +2,19 @@ import classes from "./_Quote.module.scss";
 import React from "react";
 import QuoteButton from "../QuoteButton/QuoteButton";
 import { useQuoteGenerator } from "../../store/store";
+import { useLocation } from "react-router-dom";
 
-const Quote = ({ button }) => {
+const Quote = ({ button, quoteText }) => {
+  const location = useLocation();
   const randomsQuotes = useQuoteGenerator((state) => state.currentRandomQuote);
-
-  // if (!Array.isArray(quote.tags)) {
-  //   return [quote.tags];
-  // }
 
   return (
     <div className={classes.quote}>
-      <blockquote>{randomsQuotes.body}</blockquote>
+      {location.pathname === "/" ? (
+        <blockquote>{randomsQuotes.body}</blockquote>
+      ) : (
+        <blockquote>{quoteText}</blockquote>
+      )}
       {button ? <QuoteButton /> : null}
     </div>
   );

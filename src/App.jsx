@@ -7,18 +7,11 @@ import button from "./components/QuoteButton/QuoteButton";
 import CreatedBy from "./components/CreatedBy/CreatedBy";
 import BackButton from "./components/BackButton/BackButton";
 import { useQuoteGenerator } from "./store/store";
-import { useEffect } from "react";
 
 function App() {
   const location = useLocation();
 
   const loading = useQuoteGenerator((state) => state.isLoading);
-
-  const getRandomQuote = useQuoteGenerator((state) => state.getRandomQuote);
-
-  useEffect(() => {
-    getRandomQuote();
-  }, []);
 
   return (
     <div className="App">
@@ -28,7 +21,10 @@ function App() {
           path="/"
           element={loading ? <Comment /> : <Quote button={button} />}
         />
-        <Route path={`/author/:id`} element={<AuthorQuotes />} />
+        <Route
+          path={`/author/:id`}
+          element={loading ? <Comment /> : <AuthorQuotes />}
+        />
       </Routes>
       <div className="createdBy">
         <CreatedBy />

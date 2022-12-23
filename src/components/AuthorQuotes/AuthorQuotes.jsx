@@ -3,11 +3,10 @@ import { useQuoteGenerator } from "../../store/store";
 import Quote from "../Quote/Quote";
 
 const AuthorQuotes = () => {
-  const allAuthorQuotes = useQuoteGenerator((state) => state.allAuthorQuotes);
   const randomsQuotes = useQuoteGenerator((state) => state.currentRandomQuote);
 
-  if (!Array.isArray(allAuthorQuotes.quotes)) {
-    return [allAuthorQuotes.quotes];
+  if (!Array.isArray(randomsQuotes.quotes)) {
+    return [randomsQuotes.quotes];
   }
 
   return (
@@ -16,8 +15,8 @@ const AuthorQuotes = () => {
         <h1>{randomsQuotes.author}</h1>
       </div>
       <div className={classes.quotes}>
-        {allAuthorQuotes.quotes.map((quote) => (
-          <Quote key={quote.id} quote={quote} />
+        {randomsQuotes.quotes.map((quote) => (
+          <Quote key={quote.id} quoteText={quote.body} />
         ))}
       </div>
     </div>

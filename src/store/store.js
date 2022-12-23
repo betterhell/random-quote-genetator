@@ -18,7 +18,6 @@ const spaceReplacer = (author) => {
 export const useQuoteGenerator = create(
   persist((set, get) => ({
     currentRandomQuote: {},
-    allAuthorQuotes: {},
     isLoading: true,
     isError: null,
 
@@ -43,7 +42,6 @@ export const useQuoteGenerator = create(
 
     getAuthorQuotes: () => {
       const currentAuthor = get().currentRandomQuote;
-      const quotesList = get().allAuthorQuotes;
 
       console.log(currentAuthor);
       axios
@@ -58,12 +56,10 @@ export const useQuoteGenerator = create(
           }
         )
         .then(({ data }) => {
-          console.log(quotesList);
           set({
-            allAuthorQuotes: {
+            currentRandomQuote: {
+              ...currentAuthor,
               quotes: data.quotes,
-              author: currentAuthor.author,
-              id: currentAuthor.id,
             },
           });
           set({ isLoading: false });

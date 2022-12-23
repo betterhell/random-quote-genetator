@@ -10,17 +10,13 @@ const QuoteButton = () => {
   const getAuthorQuotes = useQuoteGenerator((state) => state.getAuthorQuotes);
   const navigate = useNavigate();
 
-  // if (!Array.isArray(quote)) {
-  //   return [quote];
-  // }
-
-  const handler = () => {
+  const getQuotesHandler = () => {
     getAuthorQuotes();
     navigate(`/author/${randomsQuotes.id}`);
   };
 
   return (
-    <button className={classes.button} onClick={handler}>
+    <button className={classes.button} onClick={getQuotesHandler}>
       <div className={classes.author}>
         {randomsQuotes.author}
         {randomsQuotes.tags.map((tag) => (
