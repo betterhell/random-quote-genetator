@@ -1,6 +1,6 @@
 import { MdCached } from "react-icons/md";
 import classes from "./_RefreshButton.module.scss";
-import { useQuoteGenerator } from "../../store/store";
+import { useQuoteGenerator } from "../../../store/store";
 
 const RefreshButton = () => {
   const getRandomQuote = useQuoteGenerator((state) => state.getRandomQuote);

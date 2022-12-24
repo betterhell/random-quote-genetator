@@ -1,0 +1,36 @@
+.toTopButton {
+  position: fixed;
+  right: -1000px;
+  bottom: 30px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  animation: pulse 2s infinite ease-in-out 1s;
+
+  &:hover {
+    animation: none;
+  }
+}
+
+.visible {
+  right: 100px;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .visible {
+    display: none;
+  }
+}

@@ -1,6 +1,6 @@
 import classes from "./_Quote.module.scss";
 import React from "react";
-import QuoteButton from "../QuoteButton/QuoteButton";
+import QuoteButton from "../UI/QuoteButton/QuoteButton";
 import { useQuoteGenerator } from "../../store/store";
 import { useLocation } from "react-router-dom";
 
