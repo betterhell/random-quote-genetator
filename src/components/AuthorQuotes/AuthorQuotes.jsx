@@ -1,6 +1,6 @@
+import Quote from "../Quote/Quote";
 import classes from "./_AuthorQuotes.module.scss";
 import { useQuoteGenerator } from "../../store/store";
-import Quote from "../Quote/Quote";
 
 const AuthorQuotes = () => {
   const randomsQuotes = useQuoteGenerator((state) => state.currentRandomQuote);

@@ -1,13 +1,13 @@
 import Quote from "./components/Quote/Quote";
 import RefreshButton from "./components/UI/RefreshButton/RefreshButton";
 import AuthorQuotes from "./components/AuthorQuotes/AuthorQuotes";
-import { Comment } from "react-loader-spinner";
-import { Route, Routes, useLocation } from "react-router-dom";
-import button from "./components/UI/QuoteButton/QuoteButton";
+import button from "./components/QuoteButton/QuoteButton";
 import CreatedBy from "./components/CreatedBy/CreatedBy";
 import BackButton from "./components/UI/BackButton/BackButton";
-import { useQuoteGenerator } from "./store/store";
 import ToTopButton from "./components/UI/ToTupButton/ToTopButton";
+import { Comment } from "react-loader-spinner";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { useQuoteGenerator } from "./store/store";
 
 function App() {
   const location = useLocation();

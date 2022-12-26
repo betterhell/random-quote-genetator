@@ -1,4 +1,3 @@
-import React from "react";
 import classes from "./_BackButton.module.scss";
 import { RiArrowGoBackLine } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";

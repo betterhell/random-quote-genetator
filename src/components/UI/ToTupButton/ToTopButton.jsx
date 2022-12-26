@@ -16,6 +16,7 @@ const ToTopButton = () => {
       setShowButton(false);
     }
   };
+
   window.addEventListener("scroll", toggleVisible);
 
   return (

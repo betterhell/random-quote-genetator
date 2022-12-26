@@ -2,12 +2,13 @@ import React from "react";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import classes from "./_QuoteButton.module.scss";
 import { v4 as uuidv4 } from "uuid";
-import { useQuoteGenerator } from "../../../store/store";
 import { useNavigate } from "react-router-dom";
+import { useQuoteGenerator } from "../../store/store";
 
 const QuoteButton = () => {
   const randomsQuotes = useQuoteGenerator((state) => state.currentRandomQuote);
   const getAuthorQuotes = useQuoteGenerator((state) => state.getAuthorQuotes);
+
   const navigate = useNavigate();
 
   const getQuotesHandler = () => {
