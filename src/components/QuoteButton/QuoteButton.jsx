@@ -20,7 +20,7 @@ const QuoteButton = () => {
     <button className={classes.button} onClick={getQuotesHandler}>
       <div className={classes.author}>
         {randomsQuotes.author}
-        {randomsQuotes.tags.map((tag) => (
+        {randomsQuotes.tags?.map((tag) => (
           <span key={uuidv4()}>{tag}</span>
         ))}
       </div>

@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { BsArrowUpCircle } from "react-icons/bs";
 import classes from "./_ToTopButton.module.scss";
-import { useQuoteGenerator } from "../../../store/store";
 
 const ToTopButton = () => {
-  const backToTopHandler = useQuoteGenerator((state) => state.backToTopHandler);
-
   const [showButton, setShowButton] = useState(false);
+
+  const backToTopHandler = () => {
+    window.scrollTo({ behavior: "smooth", top: 0 });
+  };
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
